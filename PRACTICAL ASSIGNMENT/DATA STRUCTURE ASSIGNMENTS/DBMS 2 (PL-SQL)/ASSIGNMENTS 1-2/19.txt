@@ -1,0 +1,11 @@
+DECLARE
+    fact NUMBER := 1;
+BEGIN
+    FOR n IN 1..10 LOOP
+        fact := 1;
+        FOR i IN 1..n LOOP
+            fact := fact * i;
+        END LOOP;
+        DBMS_OUTPUT.PUT_LINE('Factorial of ' || n || ' is ' || fact);
+    END LOOP;
+END;
